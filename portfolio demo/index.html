@@ -41,9 +41,9 @@
           in the digital realm began years ago, and I've since honed my skills
           in front-end and back-end development.
         </p>
-        <div class="header__btn">
-          <button class="btn">Hire Me Now</button>
-        </div>
+       <div class="header__btn">
+  <button onclick="scrollToContact()" class="btn">Hire Me Now</button>
+</div>
       </div>
     </header>
 
@@ -65,8 +65,10 @@
           meet but exceed expectations.
         </p>
         <div class="about__btn">
-          <button class="btn">Download CV</button>
-        </div>
+  <a href="assets/NADIM.pdf" target="_blank" download="NADIM.CV.pdf" class="btn">
+    <i class="ri-download-line"></i> Download CV
+  </a>
+</div>
       </div>
     </section>
 
@@ -133,22 +135,82 @@
       </p>
       <div class="portfolio__grid">
         <div class="portfolio__card">
-          <img src="assets/project-1.jpg" alt="portfolio" />
+          <div class="portfolio__card__icon">
+            <i class="ri-shopping-cart-line"></i>
+          </div>
+          <h3>E-Commerce Platform</h3>
+          <p>Full-stack online store with payment integration, inventory management, and admin dashboard.</p>
+          <div class="portfolio__tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+          <a href="#" class="portfolio__link">View Project <i class="ri-arrow-right-line"></i></a>
         </div>
         <div class="portfolio__card">
-          <img src="assets/project-2.jpg" alt="portfolio" />
+          <div class="portfolio__card__icon">
+            <i class="ri-smartphone-line"></i>
+          </div>
+          <h3>Fitness Tracking App</h3>
+          <p>Mobile application for tracking workouts, nutrition, and progress with social features.</p>
+          <div class="portfolio__tech">
+            <span>React Native</span>
+            <span>Firebase</span>
+            <span>Redux</span>
+          </div>
+          <a href="#" class="portfolio__link">View Project <i class="ri-arrow-right-line"></i></a>
         </div>
         <div class="portfolio__card">
-          <img src="assets/project-3.jpg" alt="portfolio" />
+          <div class="portfolio__card__icon">
+            <i class="ri-dashboard-line"></i>
+          </div>
+          <h3>Analytics Dashboard</h3>
+          <p>Real-time data visualization platform with customizable charts and reporting tools.</p>
+          <div class="portfolio__tech">
+            <span>Vue.js</span>
+            <span>D3.js</span>
+            <span>PostgreSQL</span>
+          </div>
+          <a href="#" class="portfolio__link">View Project <i class="ri-arrow-right-line"></i></a>
         </div>
         <div class="portfolio__card">
-          <img src="assets/project-4.jpg" alt="portfolio" />
+          <div class="portfolio__card__icon">
+            <i class="ri-calendar-line"></i>
+          </div>
+          <h3>Travel Agency Management System</h3>
+          <p>The Travel Agency Database Management System successfully demonstrates the practical application of core DBMS concepts in a real-world scenario.</p>
+          <div class="portfolio__tech">
+            <span>Angular</span>
+            <span>Express</span>
+            <span>MySQL</span>
+          </div>
+          <a href="#" class="portfolio__link">View Project <i class="ri-arrow-right-line"></i></a>
         </div>
         <div class="portfolio__card">
-          <img src="assets/project-5.jpg" alt="portfolio" />
+          <div class="portfolio__card__icon">
+            <i class="ri-chat-3-line"></i>
+          </div>
+          <h3>Real-Time Chat Application</h3>
+          <p>Instant messaging platform with video calls, file sharing, and group conversations.</p>
+          <div class="portfolio__tech">
+            <span>Socket.io</span>
+            <span>WebRTC</span>
+            <span>Redis</span>
+          </div>
+          <a href="#" class="portfolio__link">View Project <i class="ri-arrow-right-line"></i></a>
         </div>
         <div class="portfolio__card">
-          <img src="assets/project-6.jpg" alt="portfolio" />
+          <div class="portfolio__card__icon">
+            <i class="ri-article-line"></i>
+          </div>
+          <h3>Content Management System</h3>
+          <p>Flexible CMS with drag-and-drop editor, SEO optimization, and multi-language support.</p>
+          <div class="portfolio__tech">
+            <span>Next.js</span>
+            <span>Strapi</span>
+            <span>GraphQL</span>
+          </div>
+          <a href="#" class="portfolio__link">View Project <i class="ri-arrow-right-line"></i></a>
         </div>
       </div>
       <div class="portfolio__banner">
@@ -171,20 +233,49 @@
     </section>
 
     <section class="section__container contact__container" id="contact">
-      <div class="logo">𝓝</div>
-      <h2 class="section__header">Let's Talk With Me!</h2>
-      <p class="section__description">
-        An open invitation to connect, and exploring collaborative opportunities
-        on my personal portfolio website.
-      </p>
-      <div class="contact__socials">
-        <a href="#"><i class="ri-twitter-fill"></i></a>
-        <a href="#"><i class="ri-linkedin-fill"></i></a>
-        <a href="#"><i class="ri-behance-fill"></i></a>
-        <a href="#"><i class="ri-dribbble-line"></i></a>
-        <a href="#"><i class="ri-pinterest-line"></i></a>
-     
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-  </body>
+  <div class="logo">𝓝</div>
+  <h2 class="section__header">Let's Talk With Me!</h2>
+  <p class="section__description">
+    An open invitation to connect, and exploring collaborative opportunities
+    on my personal portfolio website.
+  </p>
+  
+  <!-- Contact Form -->
+  <form id="contactForm" class="contact__form">
+    <div class="form__group">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form__group">
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form__group">
+      <input type="text" id="subject" name="subject" placeholder="Subject" required>
+    </div>
+    <div class="form__group">
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn__form">
+      <span class="btn__text">Send Message</span>
+      <span class="btn__loading" style="display: none;">Sending...</span>
+    </button>
+    <div id="formMessage" class="form__message"></div>
+  </form>
+
+  <!-- Social Media Section -->
+  <div class="contact__divider">
+    <span>OR CONNECT WITH ME</span>
+  </div>
+  
+  <div class="contact__socials">
+    <a href="https://github.com/mdnadimhossain9" target="_blank" title="GitHub"><i class="ri-github-fill"></i></a>
+    <a href="https://www.linkedin.com/in/md-nadim-hossain-188a343a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"target="_blank" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+   <a href="https://wa.me/8801842495509" target="_blank" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+    <a href="https://www.facebook.com/yamen.hossain.9"target="_blank" title="Facebook"><i class="ri-facebook-line"></i></a>
+    <a href="https://www.instagram.com/nhyamin?igsh=ejdxajljcndoajB6"target="_blank" title="Instagram"><i class="ri-instagram-line"></i></a>
+  </div>
+</section>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="main.js"></script>
+</body>
 </html>
